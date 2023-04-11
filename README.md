@@ -76,3 +76,21 @@ Then open the terminal in the path of the bag file, and type:
 ```bash
 rosbag play SEQUENCE_NAME.bag --clock -d 1.0
 ```
+
+###  2. Run on [*KITTI-360*](https://www.cvlibs.net/datasets/kitti-360/)
+
+Both the frequency of images and LiDAR point clouds of *KITTI-Odometry* are 10 Hz, while they are strictly one-to-one. The motion distortion of LiDAR pont cluods have not been calibrated in advance, therefore, the motion calibration need to be processed in theory. However, we found that when the influence of motion distortion was taken into consideration in our visual module, the final pose estimation result would be worse. Therefore, we did not reserve the motion distortion module in this code. Users can also directly utilize the [kitti2bag](https://github.com/ZikangYuan/kitti-360_2bag) tool to convert data of *KITTI-360* to ROS bag format.
+
+After generating the ROS bag file, please go to the workspace of SDV-LOAM and type:
+
+```bash
+cd SDV-LOAM
+sourcr devel/setup.bash
+roslaunch sdv_loam run.launch
+```
+
+Then open the terminal in the path of the bag file, and type:
+
+```bash
+rosbag play SEQUENCE_NAME.bag --clock -d 1.0
+```
