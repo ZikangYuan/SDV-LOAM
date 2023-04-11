@@ -1,0 +1,15 @@
+<launch>
+
+    <!--- sdv_loam -->    
+    <node pkg="sdv_loam"    type="sdv_loam"    name="sdv_loam"    output="screen"/>
+
+    <!--- Parameter List -->  
+    <param name="imgTopic" type="string" value="/image_left" />
+    <param name="lidarTopic" type="string" value="/kitti/velo/pointcloud" />
+    <param name="calib" type="string" value="$(find sdv_loam)/calib/KITTI/04.txt" />
+    <param name="pathSensorPrameter" type="string" value="$(find sdv_loam)/sensor/04.txt" />
+    <param name="resultPath" type="string" value="$(find sdv_loam)/output/04_pred.txt" />
+    <param name="mode" type="int" value="1" />
+    <param name="quiet" type="int" value="1" />
+
+</launch>
