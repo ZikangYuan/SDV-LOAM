@@ -63,58 +63,16 @@ C. There is some randomness in this code, and the result is not stable on part o
 
 Both the frequency of images and LiDAR point clouds of *KITTI-Odometry* are 10 Hz, while they are strictly one-to-one. In addition, the motion distortion of LiDAR pont cluods have been calibrated in advance, therefore, users do not need to consider the effect of motion distortion when evaluation on *KITTI-Odometry*. Users can directly utilize the [kitti2bag](https://github.com/ZikangYuan/kitti2bag) tool to convert data of *KITTI odometry* to ROS bag format.
 
-```bash
-python3 nclt_to_rosbag.py PATH_OF_NVLT_SEQUENCE_FOLDER PATH_OF_OUTPUT_BAG
-```
-
-Then, please go to the workspace of SR-LIO and type:
+After generating the ROS bag file, please go to the workspace of SDV-LOAM and type:
 
 ```bash
-cd SR-LIO
+cd SDV-LOAM
 sourcr devel/setup.bash
-roslaunch sr_lio lio_nclt.launch
+roslaunch sdv_loam run.launch
 ```
 
 Then open the terminal in the path of the bag file, and type:
 
 ```bash
-rosbag play SEQUENCE_NAME.bag --clock -d 1.0 -r 0.2 
-```
-
-### 2. Run on [*UTBM*](https://epan-utbm.github.io/utbm_robocar_dataset/#Downloads)
-
-Before evaluating on *UTBM* dataset, a dependency needs to be installed. If your OS are Ubuntu 16.04, please type:
-
-```bash
-sudo apt-get install ros-kinetic-velodyne 
-```
-
-If your OS are Ubuntu 18.04, please type:
-
-```bash
-sudo apt-get install ros-melodic-velodyne 
-```
-
-Then open the terminal in the path of SR-LIO, and type:
-
-```bash
-sourcr devel/setup.bash
-roslaunch sr_lio lio_utbm.launch
-```
-
-Then open the terminal in the path of the bag file, and type:
-
-```bash
-rosbag play SEQUENCE_NAME.bag --clock -d 1.0 -r 0.2 
-```
-
-### 3. Run on [*ULHK*](https://github.com/weisongwen/UrbanLoco)
-
-For sequence *HK-Data-2019-01-17* and *HK-Data-2019-03-17*, the imu data does not include the gravity acceleration component, and the topic of LiDAR point cloud data is */velodyne_points_0*. For other sequences of *ULHK* used by us, the imu data includes the gravity acceleration component, and the topic of LiDAR point cloud data is */velodyne_points*. Therefore, we provide two launch files for the *ULHK* dataset.
-
-If you test SR-LIO on *HK-Data-2019-01-17* or *HK-Data-2019-03-17*, please type:
-
-```bash
-sourcr devel/setup.bash
-roslaunch sr_lio lio_ulhk1.launch
+rosbag play SEQUENCE_NAME.bag --clock -d 1.0
 ```
