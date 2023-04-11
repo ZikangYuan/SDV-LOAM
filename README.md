@@ -86,3 +86,23 @@ Then open the terminal in the path of the bag file, and type:
 ```bash
 rosbag play SEQUENCE_NAME.bag --clock -d 1.0
 ```
+
+## Citation
+
+If you use our work in your research project, please consider citing:
+
+```
+@article{10086694,
+  author={Yuan, Zikang and Wang, Qingjie and Cheng, Ken and Hao, Tianyu and Yang, Xin},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={SDV-LOAM: Semi-Direct Visual-LiDAR Odometry and Mapping}, 
+  year={2023},
+  volume={},
+  number={},
+  pages={1-18},
+  doi={10.1109/TPAMI.2023.3262817}}
+```
+
+## Acknowledgments
+
+Thanks for [DSO](https://github.com/JakobEngel/dso).
