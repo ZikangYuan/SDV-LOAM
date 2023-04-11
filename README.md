@@ -33,3 +33,18 @@ Authors: *Zikang Yuan*, *Qingjie Wang*, *Ken Cheng*, *Tianyu Hao* and [*Xin Yang
 | OS    | GCC  | Cmake | Eigen3 | PCL | Pangolin | OpenCV |
 |:-:|:-:|:-:|:-:|:-:|:-:|:-:|
 | Ubuntu 16.04 | 5.4.0  | 3.16.0 | 3.2.8 | 1.7 | 0.5 | 2.4.9 |
+
+### 2. Create ROS workspace
+
+```bash
+mkdir -p ~/SDV-LOAM/src
+cd SDV-LOAM/src
+```
+
+### 3. Clone the directory and build
+
+```bash
+git clone https://github.com/ZikangYuan/sr_lio.git
+cd ..
+catkin_make
+```
