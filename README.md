@@ -61,15 +61,15 @@ C. There is some randomness in this code, and the result is not stable on part o
 
 ###  1. Generating ROS bag from [*KITTI-Odometry*](https://www.cvlibs.net/datasets/kitti/eval_odometry.php) data
 
-Both the frequency of images and LiDAR point clouds of *KITTI-Odometry* are 10 Hz, while they are strictly one-to-one. In addition, the motion distortion of LiDAR pont cluods have been calibrated in advance, therefore, users do not need to consider the effect of motion distortion when evaluation on *KITTI-Odometry*. Users can directly utilize the [*kitti2bag*](https://github.com/ZikangYuan/kitti2bag) tool to convert data of *KITTI odometry* to ROS bag format.
+Both the frequency of images and LiDAR point clouds of *KITTI-Odometry* are 10 Hz, while they are strictly one-to-one. In addition, the motion distortion of LiDAR pont cluods have been calibrated in advance, therefore, users do not need to consider the effect of motion distortion when evaluation on *KITTI-Odometry*. Users can directly utilize the [*KITTI-Odometry to ROS bag*](https://github.com/ZikangYuan/kitti2bag) tool to convert data of *KITTI odometry* to ROS bag format.
 
 ###  2. Generating ROS bag from [*KITTI-360*](https://www.cvlibs.net/datasets/kitti-360/) data
 
-Both the frequency of images and LiDAR point clouds of *KITTI-360* are 10 Hz, while they are strictly one-to-one. The motion distortion of LiDAR pont cluods have not been calibrated in advance, therefore, the motion calibration need to be processed in theory. However, we found that when the influence of motion distortion was taken into consideration in our visual module, the final pose estimation result would be worse. Therefore, we did not reserve the motion distortion module in this code. Users can also directly utilize the [*kitti360_2bag*](https://github.com/ZikangYuan/kitti360_2bag) tool to convert data of *KITTI-360* to ROS bag format.
+Both the frequency of images and LiDAR point clouds of *KITTI-360* are 10 Hz, while they are strictly one-to-one. The motion distortion of LiDAR pont cluods have not been calibrated in advance, therefore, the motion calibration need to be processed in theory. However, we found that when the influence of motion distortion was taken into consideration in our visual module, the final pose estimation result would be worse. Therefore, we did not reserve the motion distortion module in this code. Users can also directly utilize the [*KITTI-360 to ROS bag*](https://github.com/ZikangYuan/kitti360_2bag) tool to convert data of *KITTI-360* to ROS bag format.
 
 ###  3. Generating ROS bag from [*KITTI-CARLA*](https://npm3d.fr/kitti-carla) data
 
-Both the frequency of images and LiDAR point clouds of *KITTI-CARLA* are 10 Hz, while they are strictly one-to-one. The motion distortion of LiDAR pont cluods have not been calibrated in advance, but users can perform motion calibration using the [*kitti-carla_calib*](https://github.com/ZikangYuan/kitti-carla_calib) tool. After motion calibration, users can also directly utilize the [*kitti_carla2bag*](https://github.com/ZikangYuan/kitti_carla2bag) tool to convert data of *KITTI-CARLA* to ROS bag format.
+Both the frequency of images and LiDAR point clouds of *KITTI-CARLA* are 10 Hz, while they are strictly one-to-one. The motion distortion of LiDAR pont cluods have not been calibrated in advance, but users can perform motion calibration using the [*KITTI-CARLA calibration*](https://github.com/ZikangYuan/kitti_carla_calib) tool. After motion calibration, users can also directly utilize the [*KITTI-CARLA to ROS bag*](https://github.com/ZikangYuan/kitti_carla2bag) tool to convert data of *KITTI-CARLA* to ROS bag format.
 
 ###  4. Run
 
