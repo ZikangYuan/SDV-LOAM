@@ -77,7 +77,7 @@ After generating the ROS bag file, please go to the workspace of SDV-LOAM and ty
 
 ```bash
 cd SDV-LOAM
-sourcr devel/setup.bash
+source devel/setup.bash
 roslaunch sdv_loam run.launch
 ```
 
