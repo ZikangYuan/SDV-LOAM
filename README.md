@@ -65,7 +65,7 @@ Both the frequency of images and LiDAR point clouds of *KITTI-Odometry* are 10 H
 
 ###  2. Generating ROS bag from [*KITTI-360*](https://www.cvlibs.net/datasets/kitti-360/) data
 
-Both the frequency of images and LiDAR point clouds of *KITTI-360* are 10 Hz, while they are strictly one-to-one. The motion distortion of LiDAR pont cluods have not been calibrated in advance, therefore, the motion calibration need to be processed in theory. However, we found that when the influence of motion distortion was taken into consideration in our visual module, the final pose estimation result would be worse. Therefore, we did not reserve the motion distortion module in this code. Users can also directly utilize the [*KITTI-360 to ROS bag*](https://github.com/ZikangYuan/kitti360_2bag) tool to convert data of *KITTI-360* to ROS bag format.
+Both the frequency of images and LiDAR point clouds of *KITTI-360* are 10 Hz, while they are strictly one-to-one. The motion distortion of LiDAR pont cluods have not been calibrated in advance, therefore, the motion calibration need to be processed in theory. However, we found that when the influence of motion distortion was taken into consideration in our visual module, the final pose estimation result would be worse. Therefore, we did not reserve the motion distortion module in this code. Users can also directly utilize the [*KITTI-360 to ROS bag*](https://github.com/ZikangYuan/kitti360_2bag) tool to convert data of *KITTI-360* to ROS bag format. Chinese users can also directly download KITTI-360 ROS bag from [**BaiDu Drive**](https://pan.baidu.com/s/1J6hD9Wc4UEhu158gUAwHzw), while the password is **d6w4**.
 
 ###  3. Generating ROS bag from [*KITTI-CARLA*](https://npm3d.fr/kitti-carla) data
 
