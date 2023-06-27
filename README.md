@@ -1,6 +1,6 @@
 # SDV-LOAM
 
-**SDV-LOAM** (LiDAR-Inertial Odometry with Sweep Reconstruction) is a cascaded vision-LiDAR odometry and mapping system, which consists of a LiDAR-assisted depth-enhanced visual odometry and a LiDAR odometry. At this stage, the released code is just the **vision module** of **SDV-LOAM**, while the LiDAR module would also be released soon.
+**SDV-LOAM** (LiDAR-Inertial Odometry with Sweep Reconstruction) is a cascaded vision-LiDAR odometry and mapping system, which consists of a LiDAR-assisted depth-enhanced visual odometry and a LiDAR odometry. At this stage, the released code is just the **vision module** of **SDV-LOAM**.
 
 The implementation of our vision module is based on [DSO](https://github.com/JakobEngel/dso), while we change it from monocular direct method to LiDAR-assisted semi-direct method with ROS interface. All the contributions of our vision module proposed in **SDV-LOAM** can be found in this code.
 
