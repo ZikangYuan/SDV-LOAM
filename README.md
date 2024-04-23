@@ -92,15 +92,15 @@ rosbag play SEQUENCE_NAME.bag --clock -d 1.0
 If you use our work in your research project, please consider citing:
 
 ```
-@article{10086694,
+@article{yuan2023sdv,
   author={Yuan, Zikang and Wang, Qingjie and Cheng, Ken and Hao, Tianyu and Yang, Xin},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
-  title={SDV-LOAM: Semi-Direct Visual-LiDAR Odometry and Mapping}, 
+  title={SDV-LOAM: Semi-Direct Visual–LiDAR Odometry and Mapping}, 
   year={2023},
-  volume={},
-  number={},
-  pages={1-18},
-  doi={10.1109/TPAMI.2023.3262817}}
+  volume={45},
+  number={9},
+  pages={11203-11220},
+}
 ```
 
 ## Acknowledgments
